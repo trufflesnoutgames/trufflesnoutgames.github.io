@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Truffle Snout</title>
+<meta name="description" content="Truffle Snout sniffs out hidden indie games. New finds every week on YouTube, TikTok and Instagram.">
+<meta property="og:title" content="Truffle Snout">
+<meta property="og:description" content="Sniffing out indie gems. New finds every week.">
+<meta property="og:image" content="https://trufflesnoutgames.github.io/og.png">
+<meta property="og:url" content="https://trufflesnoutgames.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@500;700;800&display=swap">
+<style>
+/* Layout: one narrow column, mascot on top, chunky sticker-style link buttons */
+:root{--bg:#FFF4E6;--card:#FFFFFF;--ink:#4A2E2A;--muted:#7A5E58;--pink:#F7B2C1;--rose:#D9667F;--honey:#F6C66B;--moss:#9CC48A;--line:#4A2E2A;
+--display:"Fredoka","Nunito",ui-rounded,system-ui,sans-serif;--body:"Nunito",ui-rounded,system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2B1D1A;--card:#3A2824;--ink:#FFF1E4;--muted:#D9C2B8;--line:#14090A;--rose:#F28AA2;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2B1D1A;--card:#3A2824;--ink:#FFF1E4;--muted:#D9C2B8;--line:#14090A;--rose:#F28AA2;color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;
+background-image:radial-gradient(circle at 12% 18%,color-mix(in srgb,var(--pink) 45%,transparent) 0 26px,transparent 27px),radial-gradient(circle at 88% 12%,color-mix(in srgb,var(--honey) 50%,transparent) 0 18px,transparent 19px),radial-gradient(circle at 90% 70%,color-mix(in srgb,var(--moss) 40%,transparent) 0 30px,transparent 31px),radial-gradient(circle at 8% 82%,color-mix(in srgb,var(--honey) 40%,transparent) 0 14px,transparent 15px);background-attachment:fixed}
+main{max-width:440px;margin:0 auto;padding-block:40px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;align-items:center;gap:28px}
+header{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.pig{width:136px;height:136px;animation:bob 3.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-2deg)}}
+@media (prefers-reduced-motion:reduce){.pig{animation:none}}
+h1{font-family:var(--display);font-weight:700;font-size:2.4rem;line-height:1;margin:6px 0 0;letter-spacing:-.01em}
+h1 span{color:var(--rose)}
+.tag{margin:0;color:var(--muted);font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase}
+.bio{margin:4px 0 0;max-width:34ch;line-height:1.5;color:var(--muted);font-weight:500}
+nav{width:100%;display:flex;flex-direction:column;gap:14px}
+.link{display:flex;align-items:center;gap:14px;padding:14px 18px;background:var(--card);color:var(--ink);text-decoration:none;border:3px solid var(--line);border-radius:18px;box-shadow:0 5px 0 var(--line);font-family:var(--display);font-weight:600;font-size:1.15rem;transition:transform .12s,box-shadow .12s}
+.link:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--line)}
+.link:active{transform:translateY(4px);box-shadow:0 1px 0 var(--line)}
+.link:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.ico{width:40px;height:40px;flex:none;border-radius:12px;display:grid;place-items:center;border:2.5px solid var(--line)}
+.ico svg{width:22px;height:22px;fill:#4A2E2A}
+.yt .ico{background:var(--pink)} .ig .ico{background:var(--honey)} .tt .ico{background:var(--moss)}
+.link small{display:block;font-family:var(--body);font-weight:700;font-size:.8rem;color:var(--muted)}
+.link .txt{flex:1;min-width:0}
+.arrow{font-size:1.3rem;color:var(--muted)}
+.devs{width:100%;box-sizing:border-box;padding:18px 20px;border:2.5px dashed color-mix(in srgb,var(--ink) 45%,transparent);border-radius:18px;line-height:1.5}
+.devs h2{font-family:var(--display);font-weight:600;font-size:1.15rem;margin:0 0 6px}
+.devs p{margin:0;color:var(--muted);font-weight:500}
+footer{font-size:.8rem;color:var(--muted);font-weight:700}
+</style>
+
+<style>html,body{margin:0}*{box-sizing:border-box}</style>
+</head>
+<body>
+<main>
+<header>
+<svg class="pig" viewBox="0 0 512 512" role="img" aria-label="Truffle Snout pig mascot"> <g stroke="#4A2E2A" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"> <path d="M256 118 C256 98 254 84 250 70" fill="none" stroke-width="11"/> <path d="M250 74 C226 50 196 54 186 62 C200 86 230 90 250 74 Z" fill="#9CC48A" stroke-width="10"/> <path d="M252 80 C270 54 300 52 312 58 C302 84 272 92 252 80 Z" fill="#9CC48A" stroke-width="10"/> <path d="M110 205 C88 140 96 96 120 86 C150 92 192 120 214 150 Z" fill="#F7B2C1"/> <path d="M402 205 C424 140 416 96 392 86 C362 92 320 120 298 150 Z" fill="#F7B2C1"/> <ellipse cx="256" cy="290" rx="196" ry="168" fill="#F7B2C1"/> </g> <path d="M128 176 C118 140 122 116 132 110 C150 116 170 130 182 146 Z" fill="#EE8FA6"/> <path d="M384 176 C394 140 390 116 380 110 C362 116 342 130 330 146 Z" fill="#EE8FA6"/> <ellipse cx="136" cy="332" rx="30" ry="18" fill="#EE8FA6" opacity="0.85"/> <ellipse cx="376" cy="332" rx="30" ry="18" fill="#EE8FA6" opacity="0.85"/> <circle cx="176" cy="262" r="19" fill="#4A2E2A"/> <circle cx="336" cy="262" r="19" fill="#4A2E2A"/> <circle cx="182" cy="255" r="6.5" fill="#fff"/> <circle cx="342" cy="255" r="6.5" fill="#fff"/> <ellipse cx="256" cy="330" rx="82" ry="58" fill="#EE94AA" stroke="#4A2E2A" stroke-width="13"/> <ellipse cx="226" cy="330" rx="12" ry="19" fill="#4A2E2A"/> <ellipse cx="286" cy="330" rx="12" ry="19" fill="#4A2E2A"/> <path d="M224 302 Q238 296 248 300" fill="none" stroke="#FBD3DC" stroke-width="7" stroke-linecap="round"/> <path d="M232 406 Q256 424 280 406" fill="none" stroke="#4A2E2A" stroke-width="10" stroke-linecap="round"/> <path d="M446 96 C450 116 456 122 476 126 C456 130 450 136 446 156 C442 136 436 130 416 126 C436 122 442 116 446 96 Z" fill="#F6C66B" stroke="#4A2E2A" stroke-width="8" stroke-linejoin="round"/> <path d="M60 110 C62 120 65 123 75 125 C65 127 62 130 60 140 C58 130 55 127 45 125 C55 123 58 120 60 110 Z" fill="#F6C66B" stroke="#4A2E2A" stroke-width="6" stroke-linejoin="round"/> </svg>
+<h1>Truffle <span>Snout</span></h1>
+<p class="tag">Sniffing out indie gems</p>
+<p class="bio">A little pig digging up hidden indie games you haven't heard of yet. A new find every week, in under 35 seconds.</p>
+</header>
+<nav aria-label="Channels">
+<a class="link yt" href="https://www.youtube.com/@trufflesnoutgames" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.7 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg></span><span class="txt">YouTube Shorts<small>@trufflesnoutgames</small></span><span class="arrow" aria-hidden="true">›</span></a>
+<a class="link tt" href="https://www.tiktok.com/@trufflesnoutgames" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M16.6 2h-3.4v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.3 6.3 0 1 0 5.4 6.2V8.6a8 8 0 0 0 4.6 1.5V6.7a4.6 4.6 0 0 1-4.6-4.7Z"/></svg></span><span class="txt">TikTok<small>@trufflesnoutgames</small></span><span class="arrow" aria-hidden="true">›</span></a>
+<a class="link ig" href="https://www.instagram.com/trufflesnoutgames/" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 7.3a4.7 4.7 0 1 0 0 9.4 4.7 4.7 0 0 0 0-9.4Zm0 7.7a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm6-7.9a1.1 1.1 0 1 1-2.2 0 1.1 1.1 0 0 1 2.2 0ZM17 2H7a5 5 0 0 0-5 5v10a5 5 0 0 0 5 5h10a5 5 0 0 0 5-5V7a5 5 0 0 0-5-5Zm3.2 15a3.2 3.2 0 0 1-3.2 3.2H7A3.2 3.2 0 0 1 3.8 17V7A3.2 3.2 0 0 1 7 3.8h10A3.2 3.2 0 0 1 20.2 7v10Z"/></svg></span><span class="txt">Instagram Reels<small>@trufflesnoutgames</small></span><span class="arrow" aria-hidden="true">›</span></a>
+</nav>
+<section class="devs">
+<h2>Made an indie game?</h2>
+<p>Send your Steam page and press kit in a DM on Instagram or TikTok. We feature games we love and always credit the developer.</p>
+</section>
+<footer>Found a truffle? Wishlist it.</footer>
+</main>
+
+</body>
+</html>
